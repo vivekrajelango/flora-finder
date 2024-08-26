@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import { config } from 'dotenv';
+config(); // Load .env file
 
-export default nextConfig;
+export default {
+  env: {
+    GOOGLE_API_KEY: process.env.GOOGLE_API_KEY
+  },
+};
