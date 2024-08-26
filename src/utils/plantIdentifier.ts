@@ -1,8 +1,7 @@
 import { GoogleGenerativeAI } from '@google/generative-ai'
 
-console.log('All environment variables:', process.env.GOOGLE_API_KEY);
 
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY as string);
+const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GOOGLE_API_KEY as string);
 
 
 export async function identifyPlant(imageFile: File) {
